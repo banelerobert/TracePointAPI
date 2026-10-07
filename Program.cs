@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TracePointAPI.Data;
-
+// Railway deployment refresh - October 2026
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
