@@ -20,6 +20,11 @@ namespace TracePointAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            // Map EF Core entities to the lowercase MySQL table names
+            modelBuilder.Entity<Case>().ToTable("cases");
+            modelBuilder.Entity<Suspect>().ToTable("suspects");
+            modelBuilder.Entity<Evidence>().ToTable("evidence");
+            modelBuilder.Entity<Investigation>().ToTable("investigations");
 
             // Case
             modelBuilder.Entity<Case>().HasData(
